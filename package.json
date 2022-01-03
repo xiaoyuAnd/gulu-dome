@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xiaoyuAnd/gulu-dome/issues"
   },
-  "homepage": "https://github.com/xiaoyuAnd/gulu-dome#readme"
+  "homepage": "https://github.com/xiaoyuAnd/gulu-dome#readme",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
 }
