@@ -7,36 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轱辘</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        :root{
-            --button-height:32px;
-            --font-size:14px;
-            --button-bg:white;
-            --border-radius:4px;
-            --button-active-bg:#eee;
-            --color:#333;
-            --border-color:#999;
-            --border-color-hover:#666;
+
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --border-radius: 4px;
+            --button-active-bg: #eee;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
         }
-        #app{
+
+        #app {
             margin: 20px;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
     </style>
+
 </head>
 <body>
 <div id="app">
-    <g-button ></g-button>
+    <g-button icon="settings">zhang</g-button>
+    <g-button>zhang</g-button>
+    <g-button icon="settings" icon-position="right">zhang</g-button>
 </div>
 
-<script src="./src/app.js">
-
-</script>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_3115307_cfw9tvppaph.js"></script>
 </body>
 </html>
