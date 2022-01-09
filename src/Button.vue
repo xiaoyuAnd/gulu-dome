@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "button",
+  name: "Button",
   // props:['icon','iconPosition']
   props:{
     icon:[],
