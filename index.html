@@ -48,9 +48,25 @@
             margin: 20px;
         }
     </style>
+
 </head>
 <body>
 <div id="app">
+    <g-row>
+        <g-col></g-col>
+        <g-col></g-col>
+    </g-row>
+    <g-row>
+        <g-col span="2"></g-col>
+        <g-col span="22"></g-col>
+
+    </g-row>
+    <g-row>
+        <g-col span="1"></g-col>
+        <g-col span="23"></g-col>
+
+    </g-row>
+    <hr>
     <div class="box">
         <g-input value="zhang"></g-input>
         <g-input value="wang" disabled></g-input>
@@ -60,11 +76,11 @@
         <g-input value="limei" error="姓名不能少于两个字"></g-input>
     </div>
     <div class="box">
-        <g-input value="limei" @change="inputChange" ></g-input>
+        <g-input value="limei" @change="inputChange"></g-input>
     </div>
     <div class="box">
-        <g-input value="zhang"  v-model="message" ></g-input>
-        {{message}}
+        <g-input value="zhang" v-model="message"></g-input>
+        {{ message }}
         <button @click="message+=1">+1</button>
     </div>
     <div class="buttons">
