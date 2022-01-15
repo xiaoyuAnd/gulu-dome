@@ -15,9 +15,9 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$children);
+    // console.log(this.$children);
     this.$children.forEach((vm) => {
-      console.log(vm.$options.name);
+      // console.log(vm.$options.name);
       if (vm.$options.name === 'Sider') {
         this.layoutClass.hasSider = true
       }

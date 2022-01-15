@@ -53,7 +53,8 @@
             border: 1px solid red;
             min-height: 100px;
         }
-        .sider{
+
+        .sider {
             width: 200px;
         }
     </style>
@@ -61,16 +62,19 @@
 </head>
 <body>
 <div id="app">
-    <g-layout class="layout">
-        <g-sider class="dome sider" >sider</g-sider>
+    <button @click="createToast">click</button>
+    <g-toast>
+    </g-toast>
+    <!--    <g-layout class="layout">-->
+    <!--        <g-sider class="dome sider" >sider</g-sider>-->
 
-        <g-layout>
-            <g-header class="dome">header</g-header>
-            <g-content class="dome">content</g-content>
-            <g-footer class="dome">footer</g-footer>
-        </g-layout>
+    <!--        <g-layout>-->
+    <!--            <g-header class="dome">header</g-header>-->
+    <!--            <g-content class="dome">content</g-content>-->
+    <!--            <g-footer class="dome">footer</g-footer>-->
+    <!--        </g-layout>-->
 
-    </g-layout>
+    <!--    </g-layout>-->
     <!--    <div style="border: 1px solid #000">-->
     <!--        <g-row gutter="10">-->
     <!--            <g-col>1</g-col>-->
