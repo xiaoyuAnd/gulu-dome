@@ -53,18 +53,23 @@
             border: 1px solid red;
             min-height: 100px;
         }
+        .sider{
+            width: 200px;
+        }
     </style>
 
 </head>
 <body>
 <div id="app">
     <g-layout class="layout">
-        <g-header class="dome">header</g-header>
+        <g-sider class="dome sider" >sider</g-sider>
+
         <g-layout>
+            <g-header class="dome">header</g-header>
             <g-content class="dome">content</g-content>
-            <g-sider class="dome">sider</g-sider>
+            <g-footer class="dome">footer</g-footer>
         </g-layout>
-        <g-footer>footer</g-footer>
+
     </g-layout>
     <!--    <div style="border: 1px solid #000">-->
     <!--        <g-row gutter="10">-->

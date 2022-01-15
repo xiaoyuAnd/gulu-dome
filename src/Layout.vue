@@ -1,24 +1,24 @@
 <template>
-  <div class="layout" :class="layoutClass">
-    <slot></slot>
-  </div>
+    <div class="layout" :class="layoutClass">
+      <slot></slot>
+    </div>
 </template>
 
 <script>
 export default {
   name: "Layout",
-  data(){
-    return{
-      layoutClass:{
-        hasSider:false
+  data() {
+    return {
+      layoutClass: {
+        hasSider: false
       }
     }
   },
   mounted() {
     console.log(this.$children);
-    this.$children.forEach((vm)=>{
+    this.$children.forEach((vm) => {
       console.log(vm.$options.name);
-      if(vm.$options.name === 'Sider'){
+      if (vm.$options.name === 'Sider') {
         this.layoutClass.hasSider = true
       }
     })
@@ -34,10 +34,11 @@ export default {
   display: flex;
   flex-direction: column;
 
-  &.hasSider{
-     flex-direction: row;
-   }
+  &.hasSider {
+    flex-direction: row;
+  }
 }
+
 
 
 </style>
