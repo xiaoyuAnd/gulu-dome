@@ -40,80 +40,94 @@
             overflow: hidden;
         }
 
-        .buttons {
-            margin: 10px;
-        }
+        /*.buttons {*/
+        /*    margin: 10px;*/
+        /*}*/
 
-        .box {
-            margin: 20px;
+        /*.box {*/
+        /*    margin: 20px;*/
+        /*}*/
+    </style>
+    <style>
+        .dome {
+            border: 1px solid red;
+            min-height: 100px;
         }
     </style>
 
 </head>
 <body>
 <div id="app">
-    <div style="border: 1px solid #000">
-        <g-row gutter="10">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">12</g-col>
-            <g-col span="22">12</g-col>
+    <g-layout class="layout">
+        <g-header class="dome">header</g-header>
+        <g-layout>
+            <g-content class="dome">content</g-content>
+            <g-sider class="dome">sider</g-sider>
+        </g-layout>
+        <g-footer>footer</g-footer>
+    </g-layout>
+    <!--    <div style="border: 1px solid #000">-->
+    <!--        <g-row gutter="10">-->
+    <!--            <g-col>1</g-col>-->
+    <!--            <g-col>2</g-col>-->
+    <!--        </g-row>-->
+    <!--        <g-row gutter="20">-->
+    <!--            <g-col span="2">12</g-col>-->
+    <!--            <g-col span="22">12</g-col>-->
 
-        </g-row>
-        <g-row >
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row >
-            <g-col span="2">12</g-col>
-            <g-col span="22">12</g-col>
+    <!--        </g-row>-->
+    <!--        <g-row >-->
+    <!--            <g-col>1</g-col>-->
+    <!--            <g-col>2</g-col>-->
+    <!--        </g-row>-->
+    <!--        <g-row >-->
+    <!--            <g-col span="2">12</g-col>-->
+    <!--            <g-col span="22">12</g-col>-->
 
-        </g-row>
-        <g-row>
-            <g-col span="2">12</g-col>
-            <g-col span="20" offset="2">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">12</g-col>
-            <g-col span="10" offset="2">12</g-col>
-            <g-col span="8" offset="2">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">1</g-col>
-            <g-col span="6" offset="4">2</g-col>
-            <g-col span="6" offset="6">3</g-col>
-        </g-row>
-    </div>
-    <hr>
-    <div class="box">
-        <g-input value="zhang">1</g-input>
-        <g-input value="wang" disabled>2</g-input>
-        <g-input value="boli" readonly>3</g-input>
-    </div>
-    <div class="box">
-        <g-input value="limei" error="姓名不能少于两个字"></g-input>
-    </div>
-    <div class="box">
-        <g-input value="limei" @change="inputChange"></g-input>
-    </div>
-    <div class="box">
-        <g-input value="zhang" v-model="message"></g-input>
-        {{ message }}
-        <button @click="message+=1">+1</button>
-    </div>
-    <div class="buttons">
-        <g-button :loading="loading1" @click="loading1 = !loading1">zhang</g-button>
-        <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">zhang</g-button>
-        <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">zhang
-        </g-button>
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-    </div>
+    <!--        </g-row>-->
+    <!--        <g-row>-->
+    <!--            <g-col span="2">12</g-col>-->
+    <!--            <g-col span="20" offset="2">12</g-col>-->
+    <!--        </g-row>-->
+    <!--        <g-row>-->
+    <!--            <g-col span="2">12</g-col>-->
+    <!--            <g-col span="10" offset="2">12</g-col>-->
+    <!--            <g-col span="8" offset="2">12</g-col>-->
+    <!--        </g-row>-->
+    <!--        <g-row>-->
+    <!--            <g-col span="2">1</g-col>-->
+    <!--            <g-col span="6" offset="4">2</g-col>-->
+    <!--            <g-col span="6" offset="6">3</g-col>-->
+    <!--        </g-row>-->
+    <!--    </div>-->
+    <!--    <hr>-->
+    <!--    <div class="box">-->
+    <!--        <g-input value="zhang">1</g-input>-->
+    <!--        <g-input value="wang" disabled>2</g-input>-->
+    <!--        <g-input value="boli" readonly>3</g-input>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--        <g-input value="limei" error="姓名不能少于两个字"></g-input>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--        <g-input value="limei" @change="inputChange"></g-input>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--        <g-input value="zhang" v-model="message"></g-input>-->
+    <!--        {{ message }}-->
+    <!--        <button @click="message+=1">+1</button>-->
+    <!--    </div>-->
+    <!--    <div class="buttons">-->
+    <!--        <g-button :loading="loading1" @click="loading1 = !loading1">zhang</g-button>-->
+    <!--        <g-button icon="settings" :loading="loading2" @click="loading2 = !loading2">zhang</g-button>-->
+    <!--        <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">zhang-->
+    <!--        </g-button>-->
+    <!--        <g-button-group>-->
+    <!--            <g-button icon="left">上一页</g-button>-->
+    <!--            <g-button>更多</g-button>-->
+    <!--            <g-button icon="right" icon-position="right">下一页</g-button>-->
+    <!--        </g-button-group>-->
+    <!--    </div>-->
 </div>
 
 <script src="./src/app.js"></script>
