@@ -6,7 +6,7 @@
     <span class="line"></span>
     <span @click="onClickClose" v-if="closeButton">
       {{ closeButton.text }}
-      {{position}}
+      {{ position }}
     </span>
   </div>
 
@@ -81,7 +81,40 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform:translateX(-50%) translateY(-36px);
+
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(-50%) translateY(0);
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform:translateX(-50%) translateY(0);
+
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(-50%) translateY(-36px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform:translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(-50%) translateY(0);
+  }
+}
 .toast {
+  //animation: fade-down 1s;
   display: flex;
   position: fixed;
   left: 50%;
@@ -111,16 +144,25 @@ export default {
   &.position-top {
     top: 0;
     transform: translateX(-50%);
+    &.toast{
+      animation: fade-up 1s;
+    }
   }
 
   &.position-bottom {
     bottom: 0;
     transform: translateX(-50%);
+    &.toast{
+      animation: fade-down 1s;
+    }
   }
 
   &.position-middle {
     top: 50%;
     transform: translate(-50%, -50%);
+    &.toast{
+      animation: fade-in 1s;
+    }
   }
 }
 </style>
