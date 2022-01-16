@@ -1,11 +1,16 @@
 import Toast from "./Toast";
 
 export default {
-    install (Vue, options) {
-        Vue.prototype.$toast = function (message) {
+    install(Vue, options) {
+        Vue.prototype.$toast = function (message, toastOptions) {
             let Constructor = Vue.extend(Toast)
-            let toast = new Constructor()
-            console.log(message)
+            let toast = new Constructor({
+                propsData: {
+                    closeButton: toastOptions.closeButton,
+                    enableHtml: toastOptions.enableHtml,
+                    position: toastOptions.position
+                }
+            })
             toast.$slots.default = [message]
             toast.$mount()
             document.body.appendChild(toast.$el)
