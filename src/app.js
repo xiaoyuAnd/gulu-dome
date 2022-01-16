@@ -41,7 +41,7 @@ new Vue({
     },
     methods:{
         createToast(){
-           this.$toast('<strong>hi</strong></strong>',{
+           this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}。你的智商需要充值！`,{
                closeButton:{
                    text:'知道了',
                    callback(){
@@ -49,7 +49,7 @@ new Vue({
                    }
                },
                enableHtml: true,
-               position: 'middle'
+               position: 'bottom'
            })
         }
     }
