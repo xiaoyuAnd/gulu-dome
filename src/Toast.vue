@@ -159,7 +159,7 @@ export default {
 
   &.position-middle {
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     &.toast{
       animation: fade-in 1s;
     }

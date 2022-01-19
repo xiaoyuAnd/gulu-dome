@@ -12,6 +12,12 @@ import Content from "./Content";
 import Footer from "./Footer";
 import Toast from "./Toast";
 import plugin from "./plugin";
+import tabsBody from "./Tabs-body";
+import Tabs from "./Tabs";
+import TabsHead from "./Tabs-head";
+import TabsItem from "./Tabs-item";
+import TabsPane from "./Tabs-pane";
+import TabsBody from "./Tabs-body";
 
 Vue.component('g-button',Button)
 Vue.component('g-icon',Icon)
@@ -25,6 +31,11 @@ Vue.component('g-sider',Sider)
 Vue.component('g-content',Content)
 Vue.component('g-footer',Footer)
 Vue.component('g-toast',Toast)
+Vue.component('g-tabs',Tabs)
+Vue.component('g-tabs-head',TabsHead)
+Vue.component('g-tabs-item',TabsItem)
+Vue.component('g-tabs-pane',TabsPane)
+Vue.component('g-tabs-body',TabsBody)
 Vue.use(plugin)
 
 
@@ -34,7 +45,8 @@ new Vue({
         loading1:false,
         loading2:false,
         loading3:false,
-        message: 'hi'
+        message: 'hi',
+        selectedTab:'sports'
     },
     created() {
         // this.$toast()
