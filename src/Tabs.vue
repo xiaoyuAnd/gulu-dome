@@ -32,7 +32,17 @@ export default {
     }
   },
   mounted() {
-    this.eventBus.$emit('update:selected',this.selected)
+    // console.log(this.$children);
+    this.$children.forEach((vm)=>{
+      if(vm.$options.name === 'Tabs-head'){
+        vm.$children.forEach((item)=>{
+          if(item.$options.name === 'Tabs-item' && item.name === this.selected){
+            console.log(item.$el)
+            this.eventBus.$emit('update:selected',this.selected,item)
+          }
+        })
+      }
+    })
     // console.log(this.eventBus)
     // this.$emit('updata:selected','xxxxx')
   }
