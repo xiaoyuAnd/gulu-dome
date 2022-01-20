@@ -31,20 +31,18 @@ export default {
      eventBus : this.eventBus
     }
   },
-  mounted() {
-    // console.log(this.$children);
-    this.$children.forEach((vm)=>{
-      if(vm.$options.name === 'Tabs-head'){
-        vm.$children.forEach((item)=>{
-          if(item.$options.name === 'Tabs-item' && item.name === this.selected){
-            console.log(item.$el)
-            this.eventBus.$emit('update:selected',this.selected,item)
+  mounted () {
+    this.$children.forEach((vm) => {
+      // console.log(vm.$options.name)
+      if (vm.$options.name === 'Tabs-head') {
+        vm.$children.forEach((childVm) => {
+          if (childVm.$options.name === 'Tabs-item' && childVm.name === this.selected) {
+            console.log(childVm.$el)
+            this.eventBus.$emit('update:selected', this.selected, childVm)
           }
         })
       }
     })
-    // console.log(this.eventBus)
-    // this.$emit('updata:selected','xxxxx')
   }
 }
 </script>

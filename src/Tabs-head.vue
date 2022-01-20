@@ -1,7 +1,7 @@
 <template>
   <div class="tabsHead">
     <slot></slot>
-    <div class="line"></div>
+    <div class="line" ref="line"></div>
     <div class="tabsHeadIcon">
       <slot name='actions'></slot>
     </div>
@@ -12,18 +12,24 @@
 export default {
   name: "Tabs-head",
   inject: ['eventBus'],
-  created() {
-    // console.log("爷爷给head的eventBus")
-    // console.log(this.eventBus)
-  }
+  mounted() {
+    this.eventBus.$on('update:selected',
+        (name,vm) => {
+          console.log(vm.$el)
+          let {width,bottom,left,right} = vm.$el.getBoundingClientRect()
+          // console.log(width,bottom,left,right)
+          this.$refs.line.style.width = `${width}`+'px'
+          this.$refs.line.style.left = `${left-20}`+'px'
+        })
+  },
 }
 </script>
 
 <style scoped lang="scss">
 .tabsHead {
   display: flex;
-  height: 50px;
-  //border: 1px solid red;
+  height: 36px;
+  border-bottom: 1px solid #ddd;
   justify-content: left;
   align-items: center;
   position: relative;
@@ -35,8 +41,9 @@ export default {
     position: absolute;
     bottom: 0;
     height: 1px;
-    width: 84px;
-    border-bottom: 1px solid green;
+    //width: 84px;
+    border-bottom: 2px solid skyblue;
+    transition: all .3s;
   }
 }
 </style>
