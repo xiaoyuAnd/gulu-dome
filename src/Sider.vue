@@ -29,7 +29,7 @@ export default {
 }
 
 .slide-fade-enter-active,.slide-fade-leave-active {
-  transition: all 3s ;
+  transition: all .3s ;
 }
 
 .slide-fade-enter, .slide-fade-leave-to
