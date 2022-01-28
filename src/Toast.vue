@@ -74,9 +74,6 @@ export default {
       }, this.autoCloseDelay * 1000)
     }
   }
-  ,
-
-
 }
 </script>
 

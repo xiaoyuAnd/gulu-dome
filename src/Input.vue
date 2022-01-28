@@ -36,9 +36,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$height: 32px;
-$border-color: #999;
-$border-color-hover: #666;
+//$height: 32px;
+//$border-color: #999;
+//$border-color-hover: #666;
 .wrapper {
   font-size: 12px;
   display: inline-block;
@@ -53,15 +53,15 @@ $border-color-hover: #666;
   }
 
   > input {
-    height: $height;
+    height:32px;
     border-radius: 4px;
-    border: 1px solid $border-color;
+    border: 1px solid #999;
     padding: 0 5px;
     outline: none;
     font-size: inherit;
 
     &:hover {
-      border-color: $border-color-hover;
+      border-color: #666;
     }
 
     &:focus {
